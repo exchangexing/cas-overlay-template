@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd ">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apereo.cas</groupId>
-    <artifactId>cas-overlay</artifactId>
+    <artifactId>cas</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
 
@@ -79,9 +79,12 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <mysql.driver.version>5.1.46</mysql.driver.version>
     </properties>
 
     <repositories>
+        <!--
         <repository>
             <id>sonatype-releases</id>
             <url>http://oss.sonatype.org/content/repositories/releases/</url>
@@ -106,6 +109,183 @@
             <id>shibboleth-releases</id>
             <url>https://build.shibboleth.net/nexus/content/repositories/releases</url>
         </repository>
+        -->
+
+        <repository>
+            <id>aliyun-releasess</id>
+            <name>aliyun-releases</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+
+        <repository>
+            <id>ifbp-Snapshots</id>
+            <name>ifbp-Snapshots</name>
+            <url>http://10.10.2.45:8081/nexus/content/repositories/ifbp-Snapshots</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>ifbp-Releases</id>
+            <name>fbp-Releases</name>
+            <url>http://10.10.2.45:8081/nexus/content/repositories/ifbp-Releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>loacl-libs-releases</id>
+            <name>loacl-libs-releases</name>
+            <url>http://10.10.2.45:8081/nexus/content/groups/loacl-libs-releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>loacl-libs-snapshots</id>
+            <name>loacl-libs-snapshots</name>
+            <url>http://10.10.2.45:8081/nexus/content/groups/loacl-libs-snapshots</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+
+
+        <repository>
+            <id>iUAP-Stagings</id>
+            <name>iUAP-Stagings</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/iUAP-Stagings/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus</name>
+            <url>http://172.16.51.12:8081/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>iWeb</id>
+            <name>iWeb</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/iWeb/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>thirdparty</id>
+            <name>thirdparty</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/thirdparty</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>3rdsnapshot</id>
+            <name>3rdsnapshot</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/3rdsnapshot</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>UAP_WEB2.0</id>
+            <name>UAP_WEB2.0</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/UAP_WEB2.0</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>Nuxeo</id>
+            <name>Nuxeo</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/Nuxeo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central-m1</id>
+            <name>central-m1</name>
+            <url>http://172.16.51.12:8081/nexus/content/shadows/central-m1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>iUAP</id>
+            <name>iUAP</name>
+            <url>http://172.16.51.12:8081/nexus/content/repositories/iUAP/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>libs-releases</id>
+            <name>Libs Releases</name>
+            <url>http://10.10.2.45:8081/nexus/content/groups/libs-releases/</url>
+        </repository>
+        <repository>
+            <id>libs-snapshots</id>
+            <name>Libs Snapshots</name>
+            <url>http://10.10.2.45:8081/nexus/content/groups/libs-snapshots/</url>
+        </repository>
     </repositories>
 
     <profiles>
@@ -125,6 +305,29 @@
                 <!--
                 ...Additional dependencies may be placed here...
                 -->
+                <dependency>
+                    <groupId>org.apereo.cas</groupId>
+                    <artifactId>cas-server-webapp-config-server</artifactId>
+                    <version>${cas.version}</version>
+                </dependency>
+                <!--数据库认证相关 start-->
+                <dependency>
+                    <groupId>org.apereo.cas</groupId>
+                    <artifactId>cas-server-support-jdbc</artifactId>
+                    <version>${cas.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apereo.cas</groupId>
+                    <artifactId>cas-server-support-jdbc-drivers</artifactId>
+                    <version>${cas.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <version>${mysql.driver.version}</version>
+                </dependency>
+                <!--数据库认证相关 end-->
+
             </dependencies>
         </profile>
 
